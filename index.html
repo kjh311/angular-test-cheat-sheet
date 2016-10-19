@@ -1,4 +1,30 @@
-# ANGULARJS
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>sdfasdf</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+function run() {
+  var text = document.getElementById('sourceTA').value,
+      target = document.getElementById('targetDiv'),
+      converter = new showdown.Converter(),
+      html = converter.makeHtml(text);
+
+    target.innerHTML = html;
+}
+  </script>
+</head>
+
+
+  <script src="https://cdn.jsdelivr.net/showdown/1.4.3/showdown.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/showdown/1.4.3/showdown.min.js.map"></script>
+<body>
+
+<div class="hidden">
+<textarea  id="sourceTA" rows="10" cols="82"># ANGULARJS
 This test measures the Web developer's knowledge of AngularJS, or Angular. It covers general knowledge
 of the Web application framework, which was released by Google. It also covers HTML5 and JavaScript.
 The Secure Evaluation Mode and Remote versions of this test will contain a minimum of 54 questions and
@@ -2085,5 +2111,14 @@ ng-currency
 
 
 
+</textarea>
+</div>
 
+  <!-- <hr/>
+  <button id="runBtn" onClick="">Convert</button> -->
+  <hr/>
+  <div id="targetDiv"></div>
 
+<script>run();</script>
+</body>
+</html>
